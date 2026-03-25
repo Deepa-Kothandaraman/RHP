@@ -29,10 +29,10 @@ class Main
 			
 			x1+=1;
 		}
-		int lb=n-1,rb=n-1;
+		int lb=mat[q-1],rb=n-1;
 		int ans[]=new int[n];
-		boolean vis[]=new boolean[n];
 		
+		boolean vis[]=new boolean[n];
 		for(int i=q1-1;i>=0;i--)
 		{
 			int l=mat[i][0],r=mat[i][1],x=mat[i][2],y=mat[i][3];
@@ -43,23 +43,6 @@ class Main
 				continue;
 			}
 			int k=-1;
-			// for(int i1=l;i1<=Math.max(r,lb);i1++)
-			// {
-				// if(vis[i1]) continue;
-				// vis[i1]=true;
-				// ans[i1]=(x+(k*y));
-			// }
-			// if(l<lb)
-			// {
-				// lb=l;
-			// }
-			// k+=(rb-lb);
-			// for(int i1=rb+1;i1<=r;i1++)
-			// {
-				// if(vis[i1]) continue;
-				// vis[i1]=true;
-				// ans[i1]=(x+(k*y));
-			// }
 			for(int i1=l;i1<=r;i1++)
 			{
 				k+=1;
@@ -103,4 +86,5 @@ class Main
 		}
 		System.out.println(sum);
 	}
+	public 
 }
